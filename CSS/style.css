@@ -1,0 +1,110 @@
+body {
+    background: linear-gradient( black, rgba(0, 0, 0, 0) 90%, black), url('https://i.pinimg.com/originals/63/5b/6e/635b6e3b30bfeae7b713cb8162aa2c9a.jpg') no-repeat center;
+    background-size: cover;
+    background-color: black;
+    
+}
+
+#fotos h2 {
+    margin-bottom: 4%;
+}
+
+#fotos .foto-galeria {
+    width: 100%;
+    /* height: 80vh; */
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#fotos .foto-galeria .imagem {
+    width: 22rem;
+    height: 14rem;
+    border-radius: 5px;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+#fotos .foto-galeria .imagem img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+#fotos .foto-galeria .imagem:hover img {
+    transform: scale(1.1);
+}
+
+#fotos .popup-image {
+    position: fixed;
+    top: 0;  left: 0;
+    background: rgba(0, 0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+#fotos .popup-image span {
+    position: absolute;
+    top: 0; right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+
+#fotos .popup-image img {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+}
+
+@media (max-width: 852px) {
+    #fotos .popup-image img {
+        width: 34.375rem;
+    }
+}
+
+@media (max-width: 752px) {
+    #fotos .foto-galeria {
+        gap: .25rem;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #fotos .foto-galeria .imagem {
+        width: 80%;
+        height: 120%;
+    }
+}
+
+@media (max-width:568px){
+    #fotos .popup-image img {
+        width: 28.125rem;
+    }
+}
+
+@media (max-width:464px){
+    #fotos .popup-image img {
+        width: 25rem;
+    }
+}
+
+
+
+@media (max-width:428px){
+    #fotos .popup-image img {
+        width: 18.75rem;
+    }
+}
+
